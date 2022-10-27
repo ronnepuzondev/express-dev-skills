@@ -1,15 +1,18 @@
 const skills = [
   { id: 125223, skill: "HTML"},
   { id: 127904, skill: "CSS"},
-  { id: 139608, skill: "JAVASCRIPT"},
-  { id: 139608, skill: "NODE.JS"},
+  { id: 139608, skill: "Javascript"},
+  { id: 139608, skill: "Node.JS"},
+  { id: 139608, skill: "Express.JS"},
+  { id: 139608, skill: "MongoDB - in progress"}
 ];
 
 module.exports = {
   getAll,
   getOne,
   deleteOne,
-  create
+  create,
+  update
 };
 
 function getAll() {
@@ -30,4 +33,10 @@ function deleteOne(id) {
 function create(skill) {
   skill.id = Date.now() % 100000
   skills.push(skill)
+}
+
+function update(id, skill) {
+  const idx = skills.findIndex(skill => skill.id === parseInt(id));
+  skill.id = parseInt(id);
+  skills.splice(idx, 1, skill);
 }

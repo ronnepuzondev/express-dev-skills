@@ -1,7 +1,7 @@
 body {
   padding: 50px;
   font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: grey;
+  background-color: whitesmoke;
 }
 
 a {
@@ -9,7 +9,7 @@ a {
 }
 
 .delete-form {
-  display: block;
+  display: inline-block;
   margin-right: 10px;
 }
 
@@ -24,4 +24,8 @@ li {
 
 div {
   margin-top: 10px;
+}
+
+.skillEdit  {
+  margin-top: 50px;
 }

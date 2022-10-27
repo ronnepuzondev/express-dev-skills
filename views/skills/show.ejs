@@ -9,8 +9,9 @@
 </head>
 <body>
   <a href="/">Home</a> | <a href="/skills">Ronne's Dev Skills</a>
-    <h3>
-      <%= skill.skill %>
-
+<div class="skillEdit">
+      <%= skill.skill %><br>
+      <a href='/skills/<%= skill.id %>/edit'>Edit Skill</a>
+    </div>
 </body>
 </html>

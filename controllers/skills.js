@@ -9,7 +9,9 @@ module.exports = {
   show,
   delete: deleteSkill,
   new: newTodo,
-  create
+  create,
+  edit,
+  update
 };
 
 function newTodo(req, res) {
@@ -36,4 +38,16 @@ function deleteSkill(req, res) {
 function create(req, res) {
   Skill.create(req.body)
   res.redirect('/skills')
+}
+
+function edit(req, res) {
+  res.render('skills/edit', {
+    skill: Skill.getOne(req.params.id)
+  })
+  
+}
+
+function update(req, res) {
+  Skill.update(req.params.id, req.body);
+  res.redirect('/skills');
 }
