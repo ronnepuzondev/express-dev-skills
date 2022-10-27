@@ -4,13 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Express Dev Skills</title>
+    <title>Ronne Puzon's Dev Skills</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <form action="/skills" method="POST" autocomplete="off">
-      <input type="text" name="skill" />
-      <button type="submit">Save Skill</button>
-    </form>
+    <a href="/">Home</a> | <a href="/skills">Ronne's Dev Skills</a>
+    <div>
+      <form action="/skills" method="POST" autocomplete="off">
+        <input
+          id="addSkill"
+          type="text"
+          name="skill"
+          placeholder="Input new skill here.."
+        />
+        <button type="submit">Add New Skill</button>
+      </form>
+    </div>
   </body>
 </html>

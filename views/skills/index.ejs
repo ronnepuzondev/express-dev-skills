@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Express Dev Skills</title>
+    <title>Ronne Puzon's Dev Skills</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h1>My Dev Skills</h1>
+    <h1>Ronne Puzon's Dev Skills</h1>
     <ul>
       <% skills.forEach(function(t) { %>
       <li>
+        <a href="/skills/<%= t.id %>"><%= t.skill %></a>
         <form
           action="/skills/<%= t.id %>?_method=DELETE"
           class="delete-form"
@@ -19,7 +20,6 @@
         >
           <button type="submit">X</button>
         </form>
-        <a href="/skills/<%= t.id %>"><%= t.skill %></a>
       </li>
       <% }); %>
     </ul>
